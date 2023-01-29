@@ -3,10 +3,17 @@ import {createStore} from 'redux';
 const ADD = 'ADD';
 const DELETE = 'DELETE';
 
-const addTodo = (text) => {
+export const addTodo = (text) => {
 	return {
 		type: ADD,
 		text,
+	};
+};
+
+export const deleteTodo = (id) => {
+	return {
+		type: DELETE,
+		id,
 	};
 };
 
